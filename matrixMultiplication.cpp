@@ -19,7 +19,7 @@ void* multi(void* arg)
 {
 	int core = step_i++;
 
-	for (int i = core * n / 4; i < (core + 1) * n / 4; i++)
+	for (int i = core * n / n; i < (core + 1) * n / n; i++)
 		for (int j = 0; j < n; j++)
 			for (int k = 0; k < n; k++)
 				matC[i][j] += matA[i][k] * matB[k][j];
